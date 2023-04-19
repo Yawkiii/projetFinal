@@ -4,7 +4,24 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Hotel hotel = new Hotel();
+
+            Console.WriteLine("Veuillez entrer les informations du client :");
+            Console.Write("Nom : ");
+            string nom = Console.ReadLine();
+            Console.Write("Prénom : ");
+            string prenom = Console.ReadLine();
+            Console.Write("Courriel : ");
+            string courriel = Console.ReadLine();
+            Console.Write("Carte de crédit : ");
+            string carteDeCredit = Console.ReadLine();
+            Console.Write("Numéro de chambre : ");
+            int numeroChambre = int.Parse(Console.ReadLine());
+
+            Client client = new Client(nom, prenom, courriel, carteDeCredit, numeroChambre);
+            hotel.AjouterClient(client);
+
+            Console.WriteLine("Client ajouté avec succès !");
         }
     }
     public class Client
