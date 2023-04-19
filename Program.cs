@@ -54,6 +54,7 @@
         {
             Clients.Add(client);
         }
+        
         public bool VerificationChambre(int numero)
         {
             foreach (Client client in Clients)
@@ -64,6 +65,11 @@
                 }
             }
             return true;
+
+        public int TotalClients()
+        {
+            return Clients.Count;
+
         }
 
     }
