@@ -54,5 +54,10 @@
         {
             Clients.Add(client);
         }
+        public int TotalClients()
+        {
+            return Clients.Count;
+        }
 
     }
+}
