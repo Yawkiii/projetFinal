@@ -43,7 +43,7 @@
     }
     public class Hotel
     {
-        private List<Client> Clients { get; set; }
+        protected List<Client> Clients { get; set; }
 
         public Hotel()
         {
@@ -54,5 +54,17 @@
         {
             Clients.Add(client);
         }
+        public bool VerificationChambre(int numero)
+        {
+            foreach (Client client in Clients)
+            {
+                if (client.NumeroChambre == numero)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
 
     }
+}
