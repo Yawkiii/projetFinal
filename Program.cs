@@ -43,7 +43,7 @@
     }
     public class Hotel
     {
-        private List<Client> Clients { get; set; }
+        protected List<Client> Clients { get; set; }
 
         public Hotel()
         {
@@ -53,10 +53,6 @@
         public void AjouterClient(Client client)
         {
             Clients.Add(client);
-        }
-        public int TotalClients()
-        {
-            return Clients.Count;
         }
 
     }
